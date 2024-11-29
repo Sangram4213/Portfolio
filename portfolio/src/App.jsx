@@ -1,8 +1,11 @@
+import './styles/app.scss';
+import Hero from './sections/Hero/Hero';
+
 function App() {
 
   return (
     <>
-      <div>My Portfolio</div>
+      <Hero/>
     </>
   );
 }
