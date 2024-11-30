@@ -1,11 +1,23 @@
 import React from "react";
 import myImg from "../../assets/myImg.jpg";
-import themeIcon from "../../assets/sun.svg";
-import linkedIn from "../../assets/linkedin-light.svg";
-import gitHub from "../../assets/gitHub-light.svg";
-import cv from '../../assets/cv.pdf'
+import sun from '../../assets/sun.svg';
+import moon from '../../assets/moon.svg';
+import linkedInLight from "../../assets/linkedin-light.svg";
+import linkedInDark from "../../assets/linkedin-dark.svg";
+import cv from "../../assets/cv.pdf";
+import { useTheme } from "../../common/ThemeContext";
+import githubLight from '../../assets/github-light.svg';
+import githubDark from '../../assets/github-dark.svg';
+
 
 const Hero = () => {
+  const { theme, toggleTheme } = useTheme();
+
+  const themeIcon = theme ==='light' ? sun : moon;
+  const linkedInIcon = theme ==='light' ? linkedInLight : linkedInDark;
+  const githubIcon = theme ==='light' ? githubLight : githubDark;
+
+
   return (
     <section id="hero">
       <div className="colorModelContainer">
@@ -14,7 +26,7 @@ const Hero = () => {
           src={myImg}
           alt="Profile Picture of Sangram Wable"
         />
-        <img className="colorMode" src={themeIcon} alt="Color mode icon" />
+        <img className="colorMode" src={themeIcon} alt="Color mode icon"  onClick={toggleTheme}/>
       </div>
       <div>
         <h1>
@@ -28,17 +40,17 @@ const Hero = () => {
             href="https://www.linkedin.com/in/sangram-wable-986705220/"
             target="_blank"
           ></a>
-          <img src={linkedIn} alt="LinkedIn" />
+          <img src={linkedInIcon} alt="LinkedIn" />
           <a href="https://github.com/Sangram4213" target="_blank"></a>
-          <img src={gitHub} alt="Github" />
+          <img src={githubIcon} alt="Github" />
         </span>
         <p>
           With a passion for developing modern web apps for commercial
           businesses.
         </p>
-<a href={cv} download>
-    <button className="hover">Resume</button>
-</a>
+        <a href={cv} download>
+          <button className="hover">Resume</button>
+        </a>
       </div>
     </section>
   );
