@@ -41,7 +41,7 @@
   }
 
   h2,h3,p{
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono',monospace;
   }
 
 h1,h2{
@@ -70,4 +70,5 @@ p{
     cursor: pointer;
 }
 
-@import 'hero.scss'
+@import 'hero.scss';
+@import 'project.scss';
