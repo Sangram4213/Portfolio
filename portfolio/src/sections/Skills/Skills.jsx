@@ -12,8 +12,8 @@ const Skills = () => {
         <SkillList src={checkMarkIcon} skill="JavaScript" />
         <SkillList src={checkMarkIcon} skill="TypeScript" />
         <SkillList src={checkMarkIcon} skill="React" />
-        <hr />
         </div>
+        <hr />
         <div className="skillList">
         <SkillList src={checkMarkIcon} skill="Nodejs" />
         <SkillList src={checkMarkIcon} skill="Redux" />
