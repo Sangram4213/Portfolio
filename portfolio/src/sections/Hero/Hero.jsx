@@ -1,34 +1,37 @@
 import React from "react";
 import myImg from "../../assets/myImg.jpg";
-import sun from '../../assets/sun.svg';
-import moon from '../../assets/moon.svg';
+import sun from "../../assets/sun.svg";
+import moon from "../../assets/moon.svg";
 import linkedInLight from "../../assets/linkedin-light.svg";
 import linkedInDark from "../../assets/linkedin-dark.svg";
 import cv from "../../assets/cv.pdf";
 import { useTheme } from "../../common/ThemeContext";
-import githubLight from '../../assets/github-light.svg';
-import githubDark from '../../assets/github-dark.svg';
-
+import githubLight from "../../assets/github-light.svg";
+import githubDark from "../../assets/github-dark.svg";
 
 const Hero = () => {
   const { theme, toggleTheme } = useTheme();
 
-  const themeIcon = theme ==='light' ? sun : moon;
-  const linkedInIcon = theme ==='light' ? linkedInLight : linkedInDark;
-  const githubIcon = theme ==='light' ? githubLight : githubDark;
-
+  const themeIcon = theme === "light" ? sun : moon;
+  const linkedInIcon = theme === "light" ? linkedInLight : linkedInDark;
+  const githubIcon = theme === "light" ? githubLight : githubDark;
 
   return (
-    <section id="hero">
+    <section id="hero" className="container">
       <div className="colorModelContainer">
         <img
           className="hero"
           src={myImg}
           alt="Profile Picture of Sangram Wable"
         />
-        <img className="colorMode" src={themeIcon} alt="Color mode icon"  onClick={toggleTheme}/>
+        <img
+          className="colorMode"
+          src={themeIcon}
+          alt="Color mode icon"
+          onClick={toggleTheme}
+        />
       </div>
-      <div>
+      <div className="info">
         <h1>
           Sangram
           <br />
@@ -39,12 +42,14 @@ const Hero = () => {
           <a
             href="https://www.linkedin.com/in/sangram-wable-986705220/"
             target="_blank"
-          ></a>
-          <img src={linkedInIcon} alt="LinkedIn" />
-          <a href="https://github.com/Sangram4213" target="_blank"></a>
-          <img src={githubIcon} alt="Github" />
+          >
+            <img src={linkedInIcon} alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/Sangram4213" target="_blank">
+            <img src={githubIcon} alt="Github" />
+          </a>
         </span>
-        <p>
+        <p className="description">
           With a passion for developing modern web apps for commercial
           businesses.
         </p>
