@@ -28,6 +28,25 @@
     gap: 30px; 
  }
 
+ .project-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0987f2;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #065db1;
+      transform: translateY(-2px);
+    }
+}
+
 @media (width >= 800px) {
     .projectContainer {
       flex-direction: row;
