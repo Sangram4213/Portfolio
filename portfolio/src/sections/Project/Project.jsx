@@ -1,7 +1,7 @@
 import React from "react";
 import eCommerceImg from '../../assets/ecommerce.png';
 import chatAppImg from '../../assets/ChatApp.jpeg';
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../../common/ProjectCard";
 
 const Project = () => {
   return (
